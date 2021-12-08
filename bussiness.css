@@ -1,0 +1,201 @@
+
+  body {
+    font: 400 16px helvetica,sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    /* width: 98vw !important; */
+    /* background: #fff; */
+  }
+#main_photo h1{
+    color: white;
+    font-size: 2.6rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#main_photo p{
+    color: rgb(221, 219, 219);
+}
+#main_photo{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* width: 100%; */
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+.button_color{
+    background-color: rgba(88, 179, 133, 0.815);
+    color: white;
+}
+.button_color:hover{
+    background-color: rgba(255, 255, 255, 0.733);
+}
+#main_photo::after{
+  transform-origin: 0%;
+  transform:skewY(-4deg);
+}
+.slanted-div {
+    position: relative;
+    padding: 100px 0;
+    background: rgb(238, 242, 252);
+    overflow: visible;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+  } 
+  /* where the magic happens */
+.slanted-div:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    transform-origin: left top;
+    transform: skewY(-3deg);
+}
+  
+.slanted-div:after {
+  position: absolute;
+  content: '';
+  /* width: 100%; */
+  height: 100%;
+  z-index: -1;
+    bottom: 0;
+    background: inherit;
+    transform-origin: left bottom;
+    transform: skewY(3deg);
+}  
+*, ::after, ::before{
+  box-sizing: border-box;
+}
+::after{
+  box-sizing: border-box;
+}
+ /* displays the content inside, as these settings in the parent breaks the effect */
+.slanted-div div {
+    text-align: center;
+}
+/* responsive */
+@media only screen
+and (max-width : 720px) {
+  header {
+    padding: 30px 30px 50px 30px;
+  }
+  .slanted-div {
+    padding: 100px 0;
+  }
+  footer {
+    padding: 65px 0 50px 0;   
+  }   
+  h1 {
+    font-size: 1.5em;
+  }
+}
+.first_sec{
+color: grey;
+}
+#para{
+  margin-top: 30px;
+}
+.box{
+ /* width: 100%; */
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-around;
+}
+.card{
+  box-shadow: 5px 5px 5px 0 rgb(189, 189, 189);
+  position: relative;
+}
+.image:hover{
+  transform: scale(1.04);
+}
+h6{
+    color: black;
+    font-weight: lighter;
+}
+h4{
+  color: black;
+  font-weight: lighter;
+  text-align: left;
+  padding-bottom: 0.5rem;
+}
+ p{
+   text-align: center;
+ color: rgb(180, 180, 180);
+} 
+ #abovecard{
+     box-shadow: 7px 7px 7px 7px gainsboro;
+     position:static;
+     z-index:10;
+     top:0;
+     margin-bottom: 5rem;
+} 
+#new_buss .card{
+    overflow:hidden;
+    box-shadow: 0 , 0.15rem, 1.75rem,0 rgb(33, 40, 50/ 15%);
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap:break-word;
+    background-clip: border-box;
+    border: 0 solid rgba(0, 0, 0, .125);
+    border-radius: 0.45rem;
+}
+.mg-10{
+  margin-bottom: 6rem !important;
+}
+.mt-n15{
+  margin-top: -10rem !important;
+}
+.fas{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+a{
+  display:flex;
+  flex-direction: column;
+  text-align: left;
+  color: inherit;
+}
+a:hover{
+  color: inherit;
+}
+h3{
+  color: rgb(171, 171, 207);
+  text-align: left;
+
+}
+li{
+  color: rgb(171, 171, 207);
+}
+.card:hover{
+  transform:translateY(6px)
+}
+#icons{
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  list-style: none;
+  justify-content: space-between;
+  justify-content: space-around
+}
+@media screen and (max-width:900) and (min-width:320) {
+  #footer .a{
+   text-align: center;
+  }
+}
